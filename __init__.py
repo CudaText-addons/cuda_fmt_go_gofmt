@@ -32,3 +32,6 @@ def goimports(text):
 
 def goreturns(text):
     return run('goreturns', text)
+
+def gofumpt(text):
+    return run('gofumpt', text)

@@ -6,16 +6,21 @@ subdir=cuda_fmt_go_gofmt
 homepage=https://github.com/CudaText-addons/cuda_fmt_go_gofmt
 
 [fmt1]
-caption=GoFmt
+caption=gofmt
 method=gofmt
 lexers=Go
 
 [fmt2]
-caption=GoImports
+caption=goimports
 method=goimports
 lexers=Go
 
 [fmt3]
-caption=GoReturns
+caption=goreturns
 method=goreturns
+lexers=Go
+
+[fmt4]
+caption=gofumpt
+method=gofumpt
 lexers=Go
