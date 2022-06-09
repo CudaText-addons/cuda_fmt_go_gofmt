@@ -22,7 +22,7 @@ def run(app, text):
     if stdout:
         return stdout.decode(enc)
     else:
-        raise Exception('Error:\n' + stderr.decode(enc))
+        raise Exception('Error: ' + stderr.decode(enc))
 
 def gofmt(text):
     return run('gofmt', text)
@@ -35,3 +35,6 @@ def goreturns(text):
 
 def gofumpt(text):
     return run('gofumpt', text)
+
+def golines(text):
+    return run('golines', text)

@@ -24,3 +24,8 @@ lexers=Go
 caption=gofumpt
 method=gofumpt
 lexers=Go
+
+[fmt5]
+caption=golines
+method=golines
+lexers=Go
