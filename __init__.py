@@ -8,17 +8,17 @@ def do_format(text):
         startupinfo = subprocess.STARTUPINFO()
         startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
         startupinfo.wShowWindow = subprocess.SW_HIDE
-        p = subprocess.Popen(['gofmt'], 
-          startupinfo=startupinfo, 
-          stdout=subprocess.PIPE, 
-          stdin=subprocess.PIPE, 
+        p = subprocess.Popen(['gofmt'],
+          startupinfo=startupinfo,
+          stdout=subprocess.PIPE,
+          stdin=subprocess.PIPE,
           stderr=subprocess.PIPE)
     else:
-        p = subprocess.Popen(['gofmt'], 
-          stdout=subprocess.PIPE, 
-          stdin=subprocess.PIPE, 
+        p = subprocess.Popen(['gofmt'],
+          stdout=subprocess.PIPE,
+          stdin=subprocess.PIPE,
           stderr=subprocess.PIPE)
-    
+
     stdout, stderr = p.communicate(text.encode(enc))
     if stdout:
         return stdout.decode(enc)
