@@ -42,5 +42,5 @@ def gofumpt(text):
     return run('gofumpt', text)
 
 def golines(text):
-    args = ct.ini_read('plugins.ini', 'golines', 'params', '')
+    args = ct.ini_read('plugins.ini', 'arguments', 'golines', '')
     return run('golines '+args, text)

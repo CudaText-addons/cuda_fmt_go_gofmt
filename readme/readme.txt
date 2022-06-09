@@ -12,8 +12,8 @@ They all must be found in PATH.
 Tool 'golines' supports additional command line arguments. Write them
 to file [CudaText]/settings/plugins.ini:
 
-  [golines]
-  params=--max-len=300
+  [arguments]
+  golines=--max-len=150
 
 
 Author: Alexey Torgashin (CudaText)
