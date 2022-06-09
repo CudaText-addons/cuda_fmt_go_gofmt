@@ -1,0 +1,11 @@
+[info]
+title=Formatter for Go using 'gofmt'
+desc=Formats Go using 'gofmt'
+type=cudatext-plugin
+subdir=cuda_fmt_go_gofmt
+homepage=https://github.com/CudaText-addons/cuda_fmt_go_gofmt
+
+[fmt1]
+caption=GoFmt
+method=do_format
+lexers=Go
