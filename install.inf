@@ -1,6 +1,6 @@
 [info]
 title=Formatters for Go lexer
-desc=Formatters for Go using gofmt/goimports/goreturns
+desc=Formatters for Go: gofmt, goimports, goreturns, gofumpt, golines
 type=cudatext-plugin
 subdir=cuda_fmt_go_gofmt
 homepage=https://github.com/CudaText-addons/cuda_fmt_go_gofmt

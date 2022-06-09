@@ -6,6 +6,8 @@ They all must be found in PATH.
 - gofmt
 - goimports
 - goreturns
+- gofumpt
+- golines
 
 Author: Alexey Torgashin (CudaText)
 License: MIT
