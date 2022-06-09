@@ -5,7 +5,7 @@ import cudatext as ct
 def run(app, text):
     enc = 'utf-8'
     exe = app.split()
-    print('Go tool:', exe)
+    #print('Go tool:', exe)
     if os.name == 'nt':
         startupinfo = subprocess.STARTUPINFO()
         startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
