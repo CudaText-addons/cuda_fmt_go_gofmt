@@ -1,19 +1,24 @@
 import os
 import subprocess
+import cudatext as ct
 
 def run(app, text):
     enc = 'utf-8'
+    exe = app.split()
+    print('Go tool:', exe)
     if os.name == 'nt':
         startupinfo = subprocess.STARTUPINFO()
         startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
         startupinfo.wShowWindow = subprocess.SW_HIDE
-        p = subprocess.Popen([app],
+        p = subprocess.Popen(
+          exe,
           startupinfo=startupinfo,
           stdout=subprocess.PIPE,
           stdin=subprocess.PIPE,
           stderr=subprocess.PIPE)
     else:
-        p = subprocess.Popen([app],
+        p = subprocess.Popen(
+          exe,
           stdout=subprocess.PIPE,
           stdin=subprocess.PIPE,
           stderr=subprocess.PIPE)
@@ -37,4 +42,5 @@ def gofumpt(text):
     return run('gofumpt', text)
 
 def golines(text):
-    return run('golines', text)
+    args = ct.ini_read('plugins.ini', 'golines', 'params', '')
+    return run('golines '+args, text)

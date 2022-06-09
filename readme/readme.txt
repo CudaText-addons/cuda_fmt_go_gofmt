@@ -9,5 +9,12 @@ They all must be found in PATH.
 - gofumpt
 - golines
 
+Tool 'golines' supports additional command line arguments. Write them
+to file [CudaText]/settings/plugins.ini:
+
+  [golines]
+  params=--max-len=300
+
+
 Author: Alexey Torgashin (CudaText)
 License: MIT
