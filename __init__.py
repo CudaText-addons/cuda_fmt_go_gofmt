@@ -1,20 +1,19 @@
 import os
 import subprocess
 
-def do_format(text):
-
+def run(app, text):
     enc = 'utf-8'
     if os.name == 'nt':
         startupinfo = subprocess.STARTUPINFO()
         startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
         startupinfo.wShowWindow = subprocess.SW_HIDE
-        p = subprocess.Popen(['gofmt'],
+        p = subprocess.Popen([app],
           startupinfo=startupinfo,
           stdout=subprocess.PIPE,
           stdin=subprocess.PIPE,
           stderr=subprocess.PIPE)
     else:
-        p = subprocess.Popen(['gofmt'],
+        p = subprocess.Popen([app],
           stdout=subprocess.PIPE,
           stdin=subprocess.PIPE,
           stderr=subprocess.PIPE)
@@ -24,3 +23,9 @@ def do_format(text):
         return stdout.decode(enc)
     else:
         raise Exception('Error:\n' + stderr.decode(enc))
+
+def do_gofmt(text):
+    return run('gofmt', text)
+
+def do_goimports(text):
+    return run('goimports', text)
