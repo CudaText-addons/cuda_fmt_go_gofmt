@@ -7,10 +7,15 @@ homepage=https://github.com/CudaText-addons/cuda_fmt_go_gofmt
 
 [fmt1]
 caption=GoFmt
-method=do_gofmt
+method=gofmt
 lexers=Go
 
 [fmt2]
 caption=GoImports
-method=do_goimports
+method=goimports
+lexers=Go
+
+[fmt3]
+caption=GoReturns
+method=goreturns
 lexers=Go

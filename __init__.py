@@ -24,8 +24,11 @@ def run(app, text):
     else:
         raise Exception('Error:\n' + stderr.decode(enc))
 
-def do_gofmt(text):
+def gofmt(text):
     return run('gofmt', text)
 
-def do_goimports(text):
+def goimports(text):
     return run('goimports', text)
+
+def goreturns(text):
+    return run('goreturns', text)
